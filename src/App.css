@@ -1,3 +1,9 @@
+:root{
+  --gradient:linear-gradient(to bottom right,#9D4EDD,#4A00E0);
+  --purpleLight:#9D4EDD;
+  --purpleDark:#4A00E0;
+  --gray:#E0E0E0
+}
 *,html{
   padding:0;
   margin:0
@@ -21,10 +27,10 @@ h2{
 }
 #check-point{
   justify-content: space-between;
+  z-index: 10 !important;
 }
 #path{
   border-radius: 5px;
-  min-width:565px;
   margin-top:-20px;
   height:10px;
   background-color: white;
@@ -33,10 +39,14 @@ h2{
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
+
 .check-point-item{
   text-align: center;
 }
+
 .icon-container{
+  position:relative;
+  z-index: 10 !important;
   display:flex;
   align-items: center;
   justify-content: center;
@@ -51,9 +61,110 @@ h2{
   -o-border-radius:50%;
   background-color: white;
 }
+#path{
+  padding:1px 3px;
+  align-items: center;
+  z-index: 1
+}
 .path-indicator{
-  
+  background: var(--gradient);
+  height:6px;
+  flex:1;
+  z-index:1
 }
 h2 {
   color:white;
+}
+
+.form-wrapper{
+  width:400px;
+  border-radius:15px;
+  overflow: hidden;
+  margin:60px auto 0;
+  background-color:white;
+  -webkit-border-radius:15px;
+  -moz-border-radius:15px;
+  -ms-border-radius:15px;
+  -o-border-radius:15px;
+}
+.form-header,form,.form-buttons,.final-info{
+  padding:20px 40px;
+}
+.form-header{
+  font-size:20px;
+  font-weight:bold;
+  letter-spacing: 0.6pt;
+  color:white;
+  background-color: var(--purpleDark);
+}
+form{
+  margin-top:15px;
+}
+label{
+  font-weight:bold;
+  font-size:14px;
+}
+input {
+  background-color:rgb(221, 221, 221);
+  border:none;
+  margin-top:4px;
+  width:100%;
+  box-sizing:border-box;
+  padding:15px 5px;
+
+}
+input:focus{
+  border-radius:5px;;
+  outline:1px solid var(--purpleDark);
+  background-color: #4b00e02c;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -ms-border-radius:5px;
+  -o-border-radius:5px;
+}
+button{
+  border:none;
+  border-radius:2px;
+  color:white;
+  font-weight: bold;
+  background: var(--gradient);
+  padding:10px 25px;
+  -webkit-border-radius:2px;
+  -moz-border-radius:2px;
+  -ms-border-radius:2px;
+  -o-border-radius:2px;
+}
+.form-buttons{
+  overflow: hidden;
+}
+.back-button{
+  float:left;
+}
+.foward-button{
+  float:right
+}
+#step-1 .back-button{
+  display:none
+}
+#step-1 .foward-button{
+  float:right;
+}
+.final-info h1{
+  font-size:20px
+}
+.final-info-list{
+  margin-top:20px;
+}
+.info-title,.info-detail{
+  font-size:14px;
+}
+ul{
+  list-style:none;
+}
+.final-info-list li{
+  
+  display:flex;
+}
+.info-title{
+  font-weight:bold
 }

@@ -38,6 +38,35 @@ function App() {
           <div class="path-indicator"></div>
         </div>      
       </header>
+      <div class="form-wrapper">
+        <div class="form-header">
+          Names
+        </div>
+{/*         <form>
+          <label>First Name</label>
+          <br/>
+          <input required />
+          <br/>
+          <br/>
+          <label>First Name</label>
+          <br/>
+          <input required/>
+        </form> */}
+        <div class="final-info">
+          <h1>please verify your info before submiting</h1>
+          <ul class="final-info-list">
+              <li><p class="info-title">First Name :</p><p class="info-detail">Name</p></li>
+              <li><p class="info-title">First Name : </p><p class="info-detail">Name</p></li>
+              <li><p class="info-title">First Name : </p><p class="info-detail">Name</p></li>
+              <li><p class="info-title">First Name : </p><p class="info-detail">Name</p></li>
+              <li><p class="info-title">First Name : </p><p class="info-detail">Name</p></li>
+          </ul>
+        </div>
+        <div class="form-buttons " id="step-1">
+          <button class="back-button">Back</button>
+          <button class="foward-button">Continue</button>
+        </div>
+      </div>
     </div>
   );
 }
