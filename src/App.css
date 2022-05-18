@@ -20,6 +20,9 @@ h2{
   font-size:14px;
   margin-bottom:14px;
 }
+.icon-container {
+  color:var(--purpleLight)
+}
 #check-point,#path{
   display: flex;
   width:50%;
