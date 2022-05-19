@@ -1,19 +1,25 @@
-import logo from './logo.svg';
+import {useState} from 'react';
 import './App.css';
-import { globalColors } from './global-colors';
 import { Header } from './components/header';
 import {InputFormContainer } from './components/input-form-container';
 
 function App() {
+  const [formValues,setFormValues]=useState({
+      firstName:"",
+      lastName:"",
+      email:"",
+      phoneNumber:"",
+      telephoneNumber:"",
+      city:"",
+      streetAddress:"",
+  })
   return (
-    <div className="App" style={globalStyle}>
+    <div className="App" >
       <Header/>
-      <InputFormContainer/>
+      <InputFormContainer formInfo={formValues} formStep={"names"} stepName={"Names"}/>
     </div>
   );
+
 }
 
-const globalStyle={
-  background:globalColors.gradient,
-}
 export default App;

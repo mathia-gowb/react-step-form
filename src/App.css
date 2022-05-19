@@ -4,6 +4,9 @@
   --purpleDark:#4A00E0;
   --gray:#E0E0E0
 }
+.App{
+  background:var(--gradient)
+}
 *,html{
   padding:0;
   margin:0
