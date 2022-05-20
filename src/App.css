@@ -149,10 +149,10 @@ button{
 .foward-button{
   float:right
 }
-#step-1 .back-button{
+#step-0 .back-button{
   display:none
 }
-#step-1 .foward-button{
+#step-0 .foward-button{
   float:right;
 }
 .final-info h1{
