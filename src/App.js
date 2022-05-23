@@ -5,7 +5,7 @@ import {InputFormContainer } from './components/input-form-container';
 
 function App() {
   const [formValues,setFormValues]=useState({
-      firstName:"asdfsadf",
+      firstName:"",
       lastName:"",
       email:"",
       phoneNumber:"",
@@ -17,7 +17,8 @@ function App() {
   const stepInfo=[
       {stepName:'Name',stepIdentifier:'name'},
       {stepName:'Contact Info',stepIdentifier:'contact-info'},
-      {stepName:'address',stepIdentifier:'address'}
+      {stepName:'address',stepIdentifier:'address'},
+      {stepName:"Verify info",stepIdentifier:'verification'}
     ];
 
   function handleNext(){
@@ -33,7 +34,8 @@ function App() {
       return {...prev,[target.id]:target.value}
     })
   }
-  console.log(formStep)
+
+
   return (
     <div className="App" >
       <Header/>
