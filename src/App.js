@@ -18,7 +18,8 @@ function App() {
       {stepName:'Name',stepIdentifier:'name'},
       {stepName:'Contact Info',stepIdentifier:'contact-info'},
       {stepName:'address',stepIdentifier:'address'},
-      {stepName:"Verify info",stepIdentifier:'verification'}
+      {stepName:"Verify info",stepIdentifier:'verification'},
+      {stepName:'Thank You!',stepIdentifier:"thank-you"}
     ];
 
   function handleNext(){
@@ -38,7 +39,7 @@ function App() {
 
   return (
     <div className="App" >
-      <Header/>
+      <Header stepNumber={formStep}/>
       <InputFormContainer 
         formInfo={formValues} 
         formStepId={stepInfo[formStep].stepIdentifier} 

@@ -24,7 +24,15 @@ h2{
   margin-bottom:14px;
 }
 .icon-container {
-  color:var(--purpleLight)
+  color:gray
+}
+.completed .icon-container{
+  color:var(--purpleLight);
+  transition:0.8s;
+  -webkit-transition:0.8s;
+  -moz-transition:0.8s;
+  -ms-transition:0.8s;
+  -o-transition:0.8s;
 }
 #check-point,#path{
   display: flex;
@@ -72,11 +80,19 @@ h2{
   align-items: center;
   z-index: 1
 }
+
 .path-indicator{
-  background: var(--gradient);
-  height:6px;
   flex:1;
   z-index:1
+}
+.completed-path{
+  height:6px;
+  background: var(--gradient);
+  transition:0.3s;
+  -webkit-transition:0.3s;
+  -moz-transition:0.3s;
+  -ms-transition:0.3s;
+  -o-transition:0.3s;
 }
 h2 {
   color:white;
@@ -174,4 +190,22 @@ ul{
 }
 .info-title{
   font-weight:bold
+}
+.steps-complete{
+  display:none;
+  padding:40px 0;
+  width:50%;
+  margin: auto;
+  text-align: center;
+}
+.steps-complete i{
+  margin-top:20px;
+  font-size:26px;
+  color:green
+}
+.form-complete-wrapper .steps-complete {
+  display:block
+}
+.form-complete-wrapper #active-form,.form-complete-wrapper .final-info,.form-complete{
+  display:none
 }
